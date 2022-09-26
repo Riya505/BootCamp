@@ -25,7 +25,12 @@ public class Employees {
                     empList.add(empName);
                     break;
                 case 2:
-                    System.out.println(empList);
+                    if(empList.size()==0){
+                        System.out.println("no employee added");
+
+                    }else {
+                        System.out.println(empList);
+                    }
                     break;
                 case 3:
                     System.exit(0);
