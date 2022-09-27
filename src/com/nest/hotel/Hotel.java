@@ -4,20 +4,22 @@ import java.util.Scanner;
 
 public class Hotel {
     public static void main(String[] args) {
+
         int total=0,choice,n,i;
         Scanner input=new Scanner(System.in);
         ArrayList<String> purchase=new ArrayList<String>();
         ArrayList<Integer> numberOf=new ArrayList<Integer>();
         ArrayList<Integer> price=new ArrayList<Integer>();
         ArrayList<Integer> sum=new ArrayList<Integer>();
+        FoodItems foodItems=new FoodItems(40,51,55,70,51);
         while (true){
             System.out.println("\t\t\t***MENU***");
             System.out.println("\t\t\t   ====");
-            System.out.println("1. Tea                  40/-");
-            System.out.println("2. Coffee Mocachino     51/-");
-            System.out.println("3. Espresso (Black)     55/-");
-            System.out.println("4. Cold-Coffee (Frappe) 70/-");
-            System.out.println("5. Ice Tea (Lemon)      51/-");
+            System.out.println("1. Tea  "+foodItems.getTea());
+            System.out.println("2. Coffee "+foodItems.getCoffee());
+            System.out.println("3. Espresso "+foodItems.getEspresso());
+            System.out.println("4. Cold-Coffee "+foodItems.getColdCoffee());
+            System.out.println("5. Ice Tea   "+foodItems.getIceTea());
             System.out.println("6. \t\tPRINT BILL");
             System.out.println("Enter your choice:");
             choice=input.nextInt();
@@ -32,10 +34,10 @@ public class Hotel {
                     sum.add(n*40);
                     break;
                 case 2:
-                    System.out.println("Number of Coffee Mocachino");
+                    System.out.println("Number of Coffee ");
                     n=input.nextInt();
                     total=total+(n*51);
-                    purchase.add("Coffee Mocachino");
+                    purchase.add("Coffee ");
                     numberOf.add(n);
                     price.add(51);
                     sum.add(n*51);
@@ -50,19 +52,19 @@ public class Hotel {
                     sum.add(n*55);
                     break;
                 case 4:
-                    System.out.println("Number of Cold-Coffee (Frappe)");
+                    System.out.println("Number of Cold-Coffee ");
                     n=input.nextInt();
                     total=total+(n*70);
-                    purchase.add("Cold-Coffee (Frappe)");
+                    purchase.add("Cold-Coffee ");
                     numberOf.add(n);
                     price.add(70);
                     sum.add(n*70);
                     break;
                 case 5:
-                    System.out.println("Number of Ice Tea (Lemon)");
+                    System.out.println("Number of Ice Tea ");
                     n=input.nextInt();
                     total=total+(n*51);
-                    purchase.add("Ice Tea (Lemon)");
+                    purchase.add("Ice Tea ");
                     numberOf.add(n);
                     price.add(51);
                     sum.add(n*51);
@@ -82,4 +84,4 @@ public class Hotel {
     }
     }
 
-}
+
